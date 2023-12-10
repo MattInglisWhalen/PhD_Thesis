@@ -1,0 +1,528 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15727,        519]
+NotebookOptionsPosition[     15045,        491]
+NotebookOutlinePosition[     15403,        507]
+CellTagsIndexPosition[     15360,        504]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"kmIgrandN", "=", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"EulerGamma", " ", "\[Epsilon]"}]], " ", 
+    SuperscriptBox["M", 
+     RowBox[{
+      RowBox[{"-", "2"}], " ", "\[Epsilon]"}]], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox["muMS", "2"], ")"}], "\[Epsilon]"], " ", 
+    RowBox[{"Gamma", "[", "\[Epsilon]", "]"}], " ", 
+    OverscriptBox["\[Alpha]", "_"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "\[Nu]"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        RowBox[{"SPD", "[", 
+         RowBox[{"\"\<0\>\"", ",", "n"}], "]"}]}]}], ")"}], "eta1"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"-", 
+       RowBox[{"SPD", "[", 
+        RowBox[{"k", ",", "nb"}], "]"}]}], ")"}], 
+     RowBox[{
+      RowBox[{"-", "1"}], "-", "eta1"}]], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{"SPD", "[", 
+         RowBox[{"k", ",", "nb"}], "]"}], 
+        RowBox[{"SPD", "[", 
+         RowBox[{"nb", ",", "p1"}], "]"}]]}], ")"}], 
+     RowBox[{"1", "-", "\[Epsilon]"}]]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"kmIgrandOver", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"EulerGamma", " ", "\[Epsilon]"}]], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", 
+        SuperscriptBox["M", "2"]}], ")"}], 
+      RowBox[{
+       RowBox[{"-", "eta2"}], "-", "\[Epsilon]"}]], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       SuperscriptBox["muMS", "2"], ")"}], "\[Epsilon]"], " ", "\[Pi]", " ", 
+     RowBox[{"(", 
+      RowBox[{"\[ImaginaryI]", "+", 
+       RowBox[{"Cot", "[", 
+        RowBox[{"\[Pi]", " ", 
+         RowBox[{"(", 
+          RowBox[{"eta2", "+", "\[Epsilon]"}], ")"}]}], "]"}]}], ")"}], " ", 
+     RowBox[{"Gamma", "[", 
+      RowBox[{"-", "\[Epsilon]"}], "]"}], " ", 
+     OverscriptBox["\[Alpha]", "_"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "\[Nu]"}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         RowBox[{"SPD", "[", 
+          RowBox[{"\"\<0\>\"", ",", "n"}], "]"}]}]}], ")"}], 
+      RowBox[{"eta1", "+", "eta2"}]], " ", 
+     SuperscriptBox[
+      RowBox[{"SPD", "[", 
+       RowBox[{"k", ",", "nb"}], "]"}], 
+      RowBox[{
+       RowBox[{"-", "1"}], "-", "eta1", "+", "eta2"}]]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{"1", "+", "eta2"}], "]"}], " ", 
+     RowBox[{"Gamma", "[", 
+      RowBox[{"1", "-", "eta2", "-", "\[Epsilon]"}], "]"}], " ", 
+     RowBox[{"Gamma", "[", "\[Epsilon]", "]"}]}], ")"}]}]}]}], "Input",
+ CellChangeTimes->{{3.751380460045363*^9, 3.751380478539418*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     TagBox["\[DoubledGamma]",
+      Function[{}, EulerGamma]], " ", "\[Epsilon]"}]], " ", 
+   OverscriptBox["\[Alpha]", "_"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", 
+      SuperscriptBox[
+       FormBox["k",
+        TraditionalForm], "-"]}], ")"}], 
+    RowBox[{
+     RowBox[{"-", 
+      SubscriptBox["\[Eta]", "1"]}], "-", "1"}]], " ", 
+   SuperscriptBox["M", 
+    RowBox[{
+     RowBox[{"-", "2"}], " ", "\[Epsilon]"}]], " ", 
+   TemplateBox[{"\[Epsilon]"},
+    "Gamma"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "\[Nu]"}], "+", 
+      RowBox[{"\[ImaginaryI]", " ", 
+       SuperscriptBox[
+        FormBox["\<\"0\"\>",
+         TraditionalForm], "+"]}]}], ")"}], 
+    SubscriptBox["\[Eta]", "1"]], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      FractionBox[
+       SuperscriptBox[
+        FormBox["k",
+         TraditionalForm], "-"], 
+       SubsuperscriptBox["p", "1", "-"]]}], ")"}], 
+    RowBox[{"1", "-", "\[Epsilon]"}]], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SubsuperscriptBox[
+      FormBox["\[Mu]",
+       TraditionalForm], 
+      OverscriptBox["MS", "_"], "2"], ")"}], "\[Epsilon]"]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.751380503457402*^9, 3.751380504780682*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", "\[Pi]", " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      TagBox["\[DoubledGamma]",
+       Function[{}, EulerGamma]], " ", "\[Epsilon]"}]], " ", 
+    OverscriptBox["\[Alpha]", "_"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox[
+       FormBox["k",
+        TraditionalForm], "-"], ")"}], 
+     RowBox[{
+      RowBox[{"-", 
+       SubscriptBox["\[Eta]", "1"]}], "+", 
+      SubscriptBox["\[Eta]", "2"], "-", "1"}]], " ", 
+    TemplateBox[{RowBox[{"-", "\[Epsilon]"}]},
+     "Gamma"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "\[Nu]"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        SuperscriptBox[
+         FormBox["\<\"0\"\>",
+          TraditionalForm], "+"]}]}], ")"}], 
+     RowBox[{
+      SubscriptBox["\[Eta]", "1"], "+", 
+      SubscriptBox["\[Eta]", "2"]}]], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"-", 
+       SuperscriptBox["M", "2"]}], ")"}], 
+     RowBox[{
+      RowBox[{"-", 
+       SubscriptBox["\[Eta]", "2"]}], "-", "\[Epsilon]"}]], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SubsuperscriptBox[
+       FormBox["\[Mu]",
+        TraditionalForm], 
+       OverscriptBox["MS", "_"], "2"], ")"}], "\[Epsilon]"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"cot", "(", 
+       RowBox[{"\[Pi]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["\[Eta]", "2"], "+", "\[Epsilon]"}], ")"}]}], ")"}], 
+      "+", "\[ImaginaryI]"}], ")"}]}], 
+   RowBox[{
+    TemplateBox[{RowBox[{
+        SubscriptBox["\[Eta]", "2"], "+", "1"}]},
+     "Gamma"], " ", 
+    TemplateBox[{"\[Epsilon]"},
+     "Gamma"], " ", 
+    TemplateBox[{RowBox[{
+        RowBox[{"-", 
+          SubscriptBox["\[Eta]", "2"]}], "-", "\[Epsilon]", "+", "1"}]},
+     "Gamma"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.751380503457402*^9, 3.751380504792707*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"tot", "=", 
+  RowBox[{"kmIgrand", "-", "kmIgrandOver"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.751380506680834*^9, 3.751380516137755*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       TagBox["\[DoubledGamma]",
+        Function[{}, EulerGamma]], " ", "\[Epsilon]"}]], " ", 
+     SubscriptBox["C", "F"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", 
+        SuperscriptBox[
+         FormBox["k",
+          TraditionalForm], "-"]}], ")"}], 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["\[Eta]", "1"]}], "-", "1"}]], " ", 
+     SuperscriptBox["M", 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", "\[Epsilon]"}]], " ", 
+     SubscriptBox["\[Alpha]", 
+      OverscriptBox["MS", "_"]], " ", 
+     TemplateBox[{"\[Epsilon]"},
+      "Gamma"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "\[Nu]"}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SuperscriptBox[
+          FormBox["\<\"0\"\>",
+           TraditionalForm], "+"]}]}], ")"}], 
+      SubscriptBox["\[Eta]", "1"]], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        FractionBox[
+         SuperscriptBox[
+          FormBox["k",
+           TraditionalForm], "-"], 
+         SubsuperscriptBox["p", "1", "-"]]}], ")"}], 
+      RowBox[{"1", "-", "\[Epsilon]"}]], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       SubsuperscriptBox[
+        FormBox["\[Mu]",
+         TraditionalForm], 
+        OverscriptBox["MS", "_"], "2"], ")"}], "\[Epsilon]"]}], 
+    RowBox[{"2", " ", "\[Pi]"}]], "-", 
+   FractionBox[
+    RowBox[{"2", " ", "\[Pi]", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       TagBox["\[DoubledGamma]",
+        Function[{}, EulerGamma]], " ", "\[Epsilon]"}]], " ", 
+     OverscriptBox["\[Alpha]", "_"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       SuperscriptBox[
+        FormBox["k",
+         TraditionalForm], "-"], ")"}], 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["\[Eta]", "1"]}], "+", 
+       SubscriptBox["\[Eta]", "2"], "-", "1"}]], " ", 
+     TemplateBox[{RowBox[{"-", "\[Epsilon]"}]},
+      "Gamma"], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "\[Nu]"}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SuperscriptBox[
+          FormBox["\<\"0\"\>",
+           TraditionalForm], "+"]}]}], ")"}], 
+      RowBox[{
+       SubscriptBox["\[Eta]", "1"], "+", 
+       SubscriptBox["\[Eta]", "2"]}]], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", 
+        SuperscriptBox["M", "2"]}], ")"}], 
+      RowBox[{
+       RowBox[{"-", 
+        SubscriptBox["\[Eta]", "2"]}], "-", "\[Epsilon]"}]], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       SubsuperscriptBox[
+        FormBox["\[Mu]",
+         TraditionalForm], 
+        OverscriptBox["MS", "_"], "2"], ")"}], "\[Epsilon]"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"cot", "(", 
+        RowBox[{"\[Pi]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["\[Eta]", "2"], "+", "\[Epsilon]"}], ")"}]}], ")"}], 
+       "+", "\[ImaginaryI]"}], ")"}]}], 
+    RowBox[{
+     TemplateBox[{RowBox[{
+         SubscriptBox["\[Eta]", "2"], "+", "1"}]},
+      "Gamma"], " ", 
+     TemplateBox[{"\[Epsilon]"},
+      "Gamma"], " ", 
+     TemplateBox[{RowBox[{
+         RowBox[{"-", 
+           SubscriptBox["\[Eta]", "2"]}], "-", "\[Epsilon]", "+", "1"}]},
+      "Gamma"]}]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.751380512465983*^9, 3.751380516419668*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      TagBox["\[DoubledGamma]",
+       Function[{}, EulerGamma]], " ", "\[Epsilon]"}]], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "\[Nu]"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", 
+        SuperscriptBox[
+         FormBox["\<\"0\"\>",
+          TraditionalForm], "+"]}]}], ")"}], 
+     SubscriptBox["\[Eta]", "1"]], " ", 
+    SubsuperscriptBox[
+     FormBox["\[Mu]",
+      TraditionalForm], 
+     OverscriptBox["MS", "_"], 
+     RowBox[{"2", " ", "\[Epsilon]"}]], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["C", "F"], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"-", 
+          SuperscriptBox[
+           FormBox["k",
+            TraditionalForm], "-"]}], ")"}], 
+        RowBox[{"-", 
+         SubscriptBox["\[Eta]", "1"]}]], " ", 
+       SuperscriptBox["M", 
+        RowBox[{
+         RowBox[{"-", "2"}], " ", "\[Epsilon]"}]], " ", 
+       RowBox[{"(", 
+        RowBox[{"-", 
+         SubscriptBox["\[Alpha]", 
+          OverscriptBox["MS", "_"]]}], ")"}], " ", 
+       SuperscriptBox[
+        TemplateBox[{"\[Epsilon]"},
+         "Gamma"], "2"], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          FractionBox[
+           SuperscriptBox[
+            FormBox["k",
+             TraditionalForm], "-"], 
+           SubsuperscriptBox["p", "1", "-"]]}], ")"}], 
+        RowBox[{"1", "-", "\[Epsilon]"}]]}], "-", 
+      FractionBox[
+       RowBox[{"4", " ", 
+        SuperscriptBox["\[Pi]", "2"], " ", 
+        OverscriptBox["\[Alpha]", "_"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          SuperscriptBox[
+           FormBox["k",
+            TraditionalForm], "-"], ")"}], 
+         RowBox[{
+          SubscriptBox["\[Eta]", "2"], "-", 
+          SubscriptBox["\[Eta]", "1"]}]], " ", 
+        TemplateBox[{RowBox[{"-", "\[Epsilon]"}]},
+         "Gamma"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "\[Nu]"}], "+", 
+           RowBox[{"\[ImaginaryI]", " ", 
+            SuperscriptBox[
+             FormBox["\<\"0\"\>",
+              TraditionalForm], "+"]}]}], ")"}], 
+         SubscriptBox["\[Eta]", "2"]], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", 
+           SuperscriptBox["M", "2"]}], ")"}], 
+         RowBox[{
+          RowBox[{"-", 
+           SubscriptBox["\[Eta]", "2"]}], "-", "\[Epsilon]"}]], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"cot", "(", 
+           RowBox[{"\[Pi]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              SubscriptBox["\[Eta]", "2"], "+", "\[Epsilon]"}], ")"}]}], 
+           ")"}], "+", "\[ImaginaryI]"}], ")"}]}], 
+       RowBox[{
+        TemplateBox[{RowBox[{
+            SubscriptBox["\[Eta]", "2"], "+", "1"}]},
+         "Gamma"], " ", 
+        TemplateBox[{RowBox[{
+            RowBox[{"-", 
+              SubscriptBox["\[Eta]", "2"]}], "-", "\[Epsilon]", "+", "1"}]},
+         "Gamma"]}]]}], ")"}]}], 
+   RowBox[{"2", " ", "\[Pi]", " ", 
+    SuperscriptBox[
+     FormBox["k",
+      TraditionalForm], "-"], " ", 
+    TemplateBox[{"\[Epsilon]"},
+     "Gamma"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.751380512465983*^9, 3.751380541612619*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Gamma", "[", 
+    RowBox[{"-", "eps"}], "]"}], "+", 
+   RowBox[{"Gamma", "[", "eps", "]"}]}], "//", 
+  "FullSimplify"}], "\[IndentingNewLine]", 
+ RowBox[{"Series", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"{", 
+    RowBox[{"eps", ",", "0", ",", "0"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.751381088766556*^9, 3.7513811206709557`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   TemplateBox[{RowBox[{"-", "\[Epsilon]"}]},
+    "Gamma"], "+", 
+   TemplateBox[{"\[Epsilon]"},
+    "Gamma"]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.751381097572847*^9, 3.751381121421257*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"2", " ", 
+      TagBox["\[DoubledGamma]",
+       Function[{}, EulerGamma]]}]}], "+", 
+    InterpretationBox[
+     RowBox[{"O", "(", 
+      SuperscriptBox["\[Epsilon]", "1"], ")"}],
+     SeriesData[$CellContext`\[Epsilon], 0, {}, 0, 1, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`\[Epsilon], 0, {(-2) EulerGamma}, 0, 1, 1],
+   Editable->False], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.751381097572847*^9, 3.751381121639204*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 870},
+WindowMargins->{{292, Automatic}, {Automatic, 48}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2810, 82, 176, "Input"],
+Cell[3393, 106, 1373, 47, 53, "Output"],
+Cell[4769, 155, 1938, 62, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6744, 222, 222, 4, 46, "Input"],
+Cell[6969, 228, 3470, 111, 118, "Output"],
+Cell[10442, 341, 3372, 105, 74, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13851, 451, 391, 11, 46, "Input"],
+Cell[14245, 464, 242, 7, 28, "Output"],
+Cell[14490, 473, 539, 15, 35, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
